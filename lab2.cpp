@@ -33,12 +33,41 @@ int main ()
 							goro[i][j]=counter;
 							counter++;
 						}
-						else if (i>j){
+						else if (counter>number){
+							goro[0][column-1]=counter;
+							counter++;							
+						}
+						else if (counter>column){
 							goro[i][j]=counter;
 							counter++;
 						}
+						else {
+							goro[i][j]=0;
+						}
 					
 					}
+				}
+				/*for (int i =0; i<number; i++){
+					for (int j = 0; j<column; j++){
+						cout<< i << j ;
+						i++;
+						if (i==number-1){
+							if (j!=column-1){
+								i==0;
+							}
+							else {
+								break;
+								break;
+							}
+						}
+					}
+				}*/
+				//Impresion de la matriz
+				for (int i=0; i<number; i++){
+					for (int j=0; j<column;j++){
+						cout<<goro[i][j] << ",	";
+					}
+					cout<<"" << endl;
 				}
 				break;
 			}
